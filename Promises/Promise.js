@@ -83,22 +83,22 @@ promiseFour.then(function(user){
 
  consumePromiseFive()
 
-//  async function getAllUser(){
-//        try {
-//             const response =await fetch('https://randomuser.me/api/');
-//             const data=await response.json();
-//             console.log(data);
-//        } catch (error) {
-//           console.log("Error:",error);
-//        }
-//  }
-//  getAllUser()
+ async function getAllUser(){
+       try {
+            const response =await fetch('https://randomuser.me/api/');
+            const data=await response.json();
+            console.log(data);
+       } catch (error) {
+          console.log("Error:",error);
+       }
+ }
+ getAllUser()
 
-fetch('https://randomuser.me/api/')
-.then((response)=>{
-    return response.json();
-})
-.then((data)=>{
-    console.log(data);
-})
-.catch((error)=>console.log(error));
+// fetch('https://randomuser.me/api/')
+// .then((response)=>{
+//     return response.json();
+// })
+// .then((data)=>{
+//     console.log(data);
+// })
+// .catch((error)=>console.log(error));
