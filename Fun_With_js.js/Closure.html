@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="blue">Blue</button>
+    <button id="green">Green</button>
+    <Script>
+        // function init() {
+        //       var name = "Mozilla"; 
+        //         function displayName() {
+        //             console.log(name);
+        //        }
+        //         displayName();
+        //     }
+        //   init();
+
+        //   function outer(){
+        //     let name="Shailesh"
+        //      function inner(){
+        //         console.log("Inner",name);
+        //      }
+        //      inner()
+        //   }
+        //   outer()
+        //   console.log("Outer",name);
+          
+    //   function makeFunc() {
+    //         const name = "Mozilla";
+    //         function displayName() {
+    //             console.log(name);
+    //         }
+    //         return displayName;
+    //     }
+
+    //     const myFunc = makeFunc();
+    //     myFunc();
+
+    </Script>
+    <Script>
+        //+++++++++++++++WE DO NOT DO THIS
+        // document.getElementById('blue').onclick=function(){
+        //     document.body.style.backgroundColor='blue'
+        // }
+        // document.getElementById('green').onclick=function(){
+        //     document.body.style.backgroundColor='green'
+        // }
+        ///++++++++++++++++++++++++++++++++++++++++++++++++WE USE THIS CLOSURE AND LEXICAL SCOPING
+
+        function clickHandler(color){
+           return  function(){
+                document.body.style.backgroundColor=`${color}`
+            }
+        }
+
+        document.getElementById('blue').onclick=clickHandler('blue')
+        document.getElementById('green').onclick=clickHandler('green')
+
+
+
+    </Script>
+</body>
+</html>
